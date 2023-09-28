@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460326062985",
+    "project_id": "searchbook-2cdf0",
+    "storage_bucket": "searchbook-2cdf0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460326062985:android:42a4d78e2485365213af58",
+        "android_client_info": {
+          "package_name": "ec.com.pmyb.searchbook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRhftYygXihGlpbX7RoP6PkanTcO1HawM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

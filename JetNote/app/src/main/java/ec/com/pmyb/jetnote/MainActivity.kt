@@ -9,6 +9,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModel
@@ -30,6 +31,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     val noteViewModel:NoteViewModel by viewModels()
+//                    val noteViewModel= viewModel<NoteViewModel>()
                     NoteApp(noteViewModel)
                 }
             }
@@ -38,8 +40,8 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun NoteApp(noteViewModel: NoteViewModel= viewModel()){
-    val listNote = noteViewModel.getAllNotes()
+fun NoteApp(noteViewModel: NoteViewModel){
+    val listNote = noteViewModel.noteList.collectAsState().value
 
     NoteScreen(
         notes = listNote,

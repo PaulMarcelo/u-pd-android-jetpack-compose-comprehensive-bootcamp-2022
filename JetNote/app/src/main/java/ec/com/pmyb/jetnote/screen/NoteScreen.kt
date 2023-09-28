@@ -25,6 +25,7 @@ import ec.com.pmyb.jetnote.R
 import ec.com.pmyb.jetnote.components.NoteInputText
 import ec.com.pmyb.jetnote.data.NotesDataSource
 import ec.com.pmyb.jetnote.model.Note
+import ec.com.pmyb.jetnote.util.formatDate
 import java.time.format.DateTimeFormatter
 
 @Composable
@@ -130,7 +131,7 @@ fun NoteRow(
                 style = MaterialTheme.typography.subtitle1
             )
             Text(
-                text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")),
+                text = formatDate(note.entryDate.time),
                 style = MaterialTheme.typography.caption
             )
 
