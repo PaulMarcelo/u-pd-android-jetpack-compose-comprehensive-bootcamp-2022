@@ -12,9 +12,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
@@ -22,9 +22,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import ec.com.pmyb.searchbook.components.ReaderLogo
 import ec.com.pmyb.searchbook.navigation.ReaderScreens
 import kotlinx.coroutines.delay
 
@@ -64,16 +64,14 @@ fun ReaderSplashScreen(navController: NavController) {
             Modifier.padding(1.dp), horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Text(
-                text = "A. Reader", style = MaterialTheme.typography.displayLarge,
-                color = Color.Red.copy(alpha = 0.5f)
-            )
+            ReaderLogo()
             Spacer(modifier = Modifier.height(15.dp))
             Text(
-                text = "\"Read. Change. Yourself\"", style = MaterialTheme.typography.bodyLarge,
+                text = "\"Read. Change. Yourself\"", style = MaterialTheme.typography.h5,
                 color = Color.LightGray
             )
 
         }
     }
 }
+
