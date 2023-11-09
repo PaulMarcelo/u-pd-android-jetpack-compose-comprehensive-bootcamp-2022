@@ -1,0 +1,5 @@
+package ec.com.pmyb.searchbook.model
+
+data class Book(val items: List<Item>,
+                val kind: String,
+                val totalItems: Int)
